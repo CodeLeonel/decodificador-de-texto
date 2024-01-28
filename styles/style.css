@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+:root {
+    --cor-primaria: #FFFFFF;
+    --cor-secundaria: #0A3871;
+    
+    --cor-terciaria: #495057;
+    --cor-quaternaria: #343A40;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter';
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cabecalho {
+    margin: 1%;
+    height: auto;
+}
+
+.apresentacao {
+    margin: 4%;
+    padding: 4%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__entrada {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: 400px;
+}
+
+.apresentacao__entrada__texto {
+    margin: 4%;
+    resize: none;
+    font-weight: 400;
+    font-size: 32px;
+    border: none;
+    height: 50%;
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__entrada__botoes {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.apresentacao__entrada__botoes__botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px;
+    padding: 24px;
+    width: 280px;
+    height: 19px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border-color: var(--cor-secundaria);
+}
+
+#criptografar {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+#descriptografar {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.apresentacao__saida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: auto;
+}
+
+.apresentacao__saida__texto {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--cor-terciaria);
+    display:none;
+}
+
+.apresentacao__saida__aviso {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__saida__sugestao {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--cor-quaternaria);
+}
+
+.rodape {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: var(--cor-primaria);
+    background-color: var(--cor-secundaria);
+    padding: 1%;
+    font-size: 16px;
+    font-weight: 400;
+}
