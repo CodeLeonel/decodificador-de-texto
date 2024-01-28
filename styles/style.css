@@ -95,7 +95,7 @@ body {
     font-size: 24px;
     font-weight: 400;
     color: var(--cor-terciaria);
-    display:none;
+    display: none;
 }
 
 .apresentacao__saida__aviso {
