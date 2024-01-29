@@ -3,9 +3,10 @@
 :root {
     --cor-primaria: #FFFFFF;
     --cor-secundaria: #0A3871;
-    
     --cor-terciaria: #495057;
     --cor-quaternaria: #343A40;
+
+    --cor-alerta: #d91414;
 }
 
 * {
@@ -53,24 +54,25 @@ body {
     color: var(--cor-secundaria);
 }
 
-.apresentacao__entrada__botoes {
+.apresentacao__entrada__painel__alerta {
+    display: flex;
+    margin: 0px 24px;
+    gap: 5px;
+}
+
+.apresentacao__entrada__painel__alerta__sinal {
+    width: 16px;
+}
+
+.apresentacao__entrada__painel__alerta__texto {
+    font-size: 16px;
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__entrada__painel__botoes {
     display: flex;
     justify-content: center;
     gap: 8px;
-}
-
-.apresentacao__entrada__botoes__botao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 24px;
-    padding: 24px;
-    width: 280px;
-    height: 19px;
-    border-radius: 24px;
-    font-size: 16px;
-    font-weight: 400;
-    border-color: var(--cor-secundaria);
 }
 
 #criptografar {
@@ -83,7 +85,7 @@ body {
     color: var(--cor-secundaria);
 }
 
-.apresentacao__saida {
+.apresentacao__saida__semconteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,20 +93,27 @@ body {
     width: auto;
 }
 
-.apresentacao__saida__texto {
+.apresentacao__saida__comconteudo {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    height: 400px;
+}
+
+.apresentacao__saida__comconteudo__texto {
     font-size: 24px;
     font-weight: 400;
     color: var(--cor-terciaria);
-    display: none;
 }
 
-.apresentacao__saida__aviso {
+.apresentacao__saida__semconteudo__aviso {
     font-size: 24px;
     font-weight: 700;
     color: var(--cor-terciaria);
 }
 
-.apresentacao__saida__sugestao {
+.apresentacao__saida__semconteudo__sugestao {
     font-size: 16px;
     font-weight: 400;
     color: var(--cor-quaternaria);
@@ -119,4 +128,18 @@ body {
     padding: 1%;
     font-size: 16px;
     font-weight: 400;
+}
+
+.botao__projeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px;
+    padding: 24px;
+    width: 280px;
+    height: 19px;
+    border-radius: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    border-color: var(--cor-secundaria);
 }

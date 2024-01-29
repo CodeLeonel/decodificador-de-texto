@@ -14,19 +14,32 @@
     </header>
     <main class="apresentacao">
         <section class="apresentacao__entrada">
-            <textarea class="apresentacao__entrada__texto">Digite seu texto</textarea>
-            <div class="apresentacao__entrada__botoes">
-                <button class="apresentacao__entrada__botoes__botao" id="criptografar" onclick="criptografar()" >Criptografar</button>
-                <button class="apresentacao__entrada__botoes__botao" id="descriptografar" onclick="descriptografar()" > Descriptografar</button>
+            <textarea class="apresentacao__entrada__texto" onkeyup="validacao(this)" placeholder="Digite seu texto"></textarea>
+            <div class="apresentacao__entrada__painel">
+                <div class="apresentacao__entrada__painel__alerta">
+                    <img class="apresentacao__entrada__painel__alerta__sinal" src="./imgs/bi_exclamation-circle-fill.svg" alt="Sinal de exclamação">
+                    <div class="apresentacao__entrada__painel__alerta__texto" id="texto_alerta">Apenas letras minúsculas e sem acento.</div>
+                </div>
+                <div class="apresentacao__entrada__painel__botoes">
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="criptografar" onclick="criptografar()" >Criptografar</button>
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="descriptografar" onclick="descriptografar()" > Descriptografar</button>
+                </div>
             </div>
+            
         </section>
         <section class="apresentacao__saida">
-            <p class="apresentacao__saida__texto">.</p>
-            <img class="apresentacao__saida__imagem" src="./imgs/lupaalura.svg" alt="Um garoto investigando um diamante">
-            <div class="apresentacao__saida__mensagens">
-                <div class="apresentacao__saida__aviso">Nenhuma mensagem encontrada</div>
-                <div class="apresentacao__saida__sugestao">Digite um texto que você deseja criptografar ou descriptografar.</div>
+            <div class="apresentacao__saida__semconteudo" id="saida__semconteudo">
+                <img class="apresentacao__saida__semconteudo__imagem" src="./imgs/lupaalura.svg" alt="Um garoto investigando um diamante">
+                <div class="apresentacao__saida__semconteudo__mensagens">
+                    <div class="apresentacao__saida__semconteudo__aviso">Nenhuma mensagem encontrada</div>
+                    <div class="apresentacao__saida__semconteudo__sugestao">Digite um texto que você deseja criptografar ou descriptografar.</div>
+                </div>
             </div>
+            <div class="apresentacao__saida__comconteudo" id="saida__comconteudo">
+                <p class="apresentacao__saida__comconteudo__texto">.</p>
+                <button class="apresentacao__saida__comconteudo__botao botao__projeto" id="copiar" onclick="copiar()" > Copiar</button>
+            </div>
+            
         </section>
     </main>
     <footer class="rodape">
