@@ -59,7 +59,7 @@ function exibeApresentacaoSemConteudo() {
 
 function validacao(event) {
 
-    let textoValido = /^[a-z]+$/.test(event.value) || event.value == "";
+    let textoValido = /^[a-z\n\s]+$/.test(event.value) || event.value == "";
 
     if(!textoValido) {
         alerta(event);
