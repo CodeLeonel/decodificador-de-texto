@@ -99,21 +99,29 @@ body {
     justify-content: space-between;
     width: auto;
     height: 400px;
+    padding: 40px;
 }
 
 .apresentacao__saida__comconteudo__texto {
     font-size: 24px;
     font-weight: 400;
     color: var(--cor-terciaria);
+    margin: 24px;
+}
+
+.apresentacao__saida__semconteudo__mensagens {
+    padding: 40px;
 }
 
 .apresentacao__saida__semconteudo__aviso {
+    padding: 12px;
     font-size: 24px;
     font-weight: 700;
     color: var(--cor-terciaria);
 }
 
 .apresentacao__saida__semconteudo__sugestao {
+    padding: 12px;
     font-size: 16px;
     font-weight: 400;
     color: var(--cor-quaternaria);
@@ -142,4 +150,34 @@ body {
     font-size: 16px;
     font-weight: 400;
     border-color: var(--cor-secundaria);
+}
+
+@media(max-width: 800px) {
+
+    .apresentacao {
+        flex-direction: column;
+    }
+
+    .apresentacao__saida__semconteudo__imagem {
+        display: none;
+    }
+
+    .apresentacao__saida__comconteudo__botao {
+        width: auto;
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .apresentacao__entrada__painel__botoes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .botao__projeto {
+        margin: 6px;
+    }
+
 }
