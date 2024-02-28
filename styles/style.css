@@ -170,11 +170,26 @@ body {
 
 @media(max-width: 500px) {
 
+    .apresentacao__entrada {
+        align-items: center;
+    }
+
+    .apresentacao__entrada__texto {
+        height: 50%;
+        width: 80%;
+    }
+
+    .apresentacao__entrada__painel__alerta {
+        width: auto;
+    }
+
     .apresentacao__entrada__painel__botoes {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
+    
 
     .botao__projeto {
         margin: 6px;
