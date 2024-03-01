@@ -2,7 +2,7 @@ function criptografar() {
     
     let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
 
-    if(texto != null && texto != undefined && texto != "") {
+    if(possuiConteudo(texto)) {
         texto = texto.replaceAll('e','enter');
         texto = texto.replaceAll('i','imes');
         texto = texto.replaceAll('a','ai');
@@ -20,7 +20,7 @@ function descriptografar() {
 
     let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
 
-    if(texto != null && texto != undefined && texto != "") {
+    if(possuiConteudo(texto)) {
         texto = texto.replaceAll('enter','e');
         texto = texto.replaceAll('imes','i');
         texto = texto.replaceAll('ai','a');
@@ -102,4 +102,8 @@ function copiar() {
 
     navigator.clipboard.writeText(conteudoSaidaTexto);
 
+}
+
+function possuiConteudo(texto) {
+    return texto != null && texto != undefined && texto != "";
 }
