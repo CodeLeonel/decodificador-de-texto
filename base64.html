@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css"/>
         <script defer src="scripts/script.js"></script>
+        <script defer src="scripts/base64.js"></script>
         <script defer src="scripts/cabecalho.js"></script>
         <title>Decodificador</title>
 </head>
@@ -16,13 +17,12 @@
             aria-haspopup="true"
             aria-controls="menu"
             aria-expanded="false">
-                <img class="icone" src="./imgs/aes.png" alt="Ícone da Criptografia AES"/>
+                <img src="./imgs/base64.png" class="icone" alt="Logo da Alura"/>
             </button>
             <ul class="cabecalho__nav__menu" id="menu" role="menu">
                 <li><a href="/index.html"><img class="imagem" src="./imgs/Logo.svg" alt="Logo da Alura"></a></li>
                 <li><a href="/caesarcipher.html"><img class="icone" src="./imgs/caesarcipher.png" alt="Ícone da Cifra de César"></a></li>
-                <li><a href="/rsa.html"><img class="icone" src="./imgs/rsa.png" alt="Ícone da Criptografia RSA"></a></li>
-                <!-- <li><a href="/"><img class="icone" src="./imgs/aes.png" alt="Ícone da Criptografia AES"></a></li> -->
+
             </ul>
         </nav>
     </header>
@@ -35,8 +35,8 @@
                     <div class="apresentacao__entrada__painel__alerta__texto" id="texto_alerta">Apenas letras minúsculas e sem acento.</div>
                 </div>
                 <div class="apresentacao__entrada__painel__botoes">
-                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="criptografar" onclick="criptografar()" >Criptografar</button>
-                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="descriptografar" onclick="descriptografar()" > Descriptografar</button>
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="criptografar" onclick="criptografarBase64()" >Criptografar</button>
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="descriptografar" onclick="descriptografarBase64()" > Descriptografar</button>
                 </div>
             </div>
             
