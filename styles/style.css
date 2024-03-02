@@ -27,6 +27,10 @@ body {
     height: auto;
 }
 
+.cabecalho__destaque {
+    display: none;
+}
+
 .cabecalho__nav__botao {
 
     background: none;
@@ -58,6 +62,14 @@ body {
 
 .icone {
     width: 120px;
+}
+
+.icone_clique {
+    display: block;
+}
+
+.hamburguer {
+    display: none;
 }
 
 .apresentacao {
@@ -130,12 +142,19 @@ body {
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     width: auto;
     height: 400px;
     padding: 40px;
 }
 
-.apresentacao__saida__comconteudo__texto {
+.apresentacao__saida__comconteudo__caixa {
+    height: 80%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.apresentacao__saida__comconteudo__caixa__texto {
     font-size: 24px;
     font-weight: 400;
     color: var(--cor-terciaria);
@@ -203,6 +222,47 @@ body {
 
 @media(max-width: 500px) {
 
+    .cabecalho {
+        margin: 0;
+    }
+
+    .cabecalho__destaque {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        color: var(--cor-primaria);
+        background-color: var(--cor-secundaria);
+        padding: 1%;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .cabecalho__nav {
+        padding: 24px 0px 0px 24px; 
+    }
+
+    .icone_clique {
+        display: none;
+    }
+
+    .hamburguer {
+        display: block;
+        border-top: 0.125rem solid;
+        width: 1.25rem;
+    }
+
+    .hamburguer::before,
+    .hamburguer::after {
+        content: " ";
+        display: block;
+        width: 1.25rem;
+        height: 0.125rem;
+        background: currentColor;
+        margin-top: 0.3125rem;
+        position: relative;
+        transition: 0.3s;
+    } 
+
     .apresentacao__entrada {
         align-items: center;
     }
@@ -224,6 +284,19 @@ body {
 
     .botao__projeto {
         margin: 6px;
+    }
+
+    .cabecalho__nav.active .hamburguer {
+        border-top-color: transparent;
+    }
+
+    .cabecalho__nav.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    .cabecalho__nav.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -0.4375rem;
     }
 
 }

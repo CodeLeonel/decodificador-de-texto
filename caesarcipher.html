@@ -11,17 +11,19 @@
 </head>
 <body>
     <header class="cabecalho">
+        <div class="cabecalho__destaque">Cifra de César</div>
         <nav class="cabecalho__nav">
             <button class="cabecalho__nav__botao" 
             aria-label="Abrir Menu"
             aria-haspopup="true"
             aria-controls="menu"
             aria-expanded="false">
-                <img src="./imgs/caesarcipher.png" alt="Ícone da Cifra de César" class="icone"/>
+                <img src="./imgs/caesarcipher.png" alt="Ícone da Cifra de César" class="icone icone_clique"/>
+                <span class="hamburguer"></span>
             </button>
             <ul class="cabecalho__nav__menu" id="menu" role="menu">
-                <li><a href="/index.html"><img class="imagem" src="./imgs/Logo.svg" alt="Logo da Alura"></a></li>
-                <li><a href="/base64.html"><img class="icone" src="./imgs/base64.png" alt="Ícone da Criptografia Base 64"></a></li>
+                <li><a href="./index.html"><img class="imagem" src="./imgs/Logo.svg" alt="Logo da Alura"></a></li>
+                <li><a href="./base64.html"><img class="icone" src="./imgs/base64.png" alt="Ícone da Criptografia Base 64"></a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +51,9 @@
                 </div>
             </div>
             <div class="apresentacao__saida__comconteudo" id="saida__comconteudo">
-                <p class="apresentacao__saida__comconteudo__texto">.</p>
+                <div class="apresentacao__saida__comconteudo__caixa">
+                    <p class="apresentacao__saida__comconteudo__caixa__texto">.</p>
+                </div>
                 <button class="apresentacao__saida__comconteudo__botao botao__projeto" id="copiar" onclick="copiar()" > Copiar</button>
             </div>
             

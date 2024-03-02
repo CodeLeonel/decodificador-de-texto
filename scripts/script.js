@@ -36,7 +36,7 @@ function descriptografar() {
 
 function exibeTexto(texto) {
 
-    let elementoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__texto').item(0);
+    let elementoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__caixa__texto').item(0);
     elementoSaidaTexto.innerHTML = texto;
 
     let apresentacao_sem_conteudo = document.getElementById('saida__semconteudo');
@@ -59,7 +59,7 @@ function exibeApresentacaoSemConteudo() {
 
 function validacao(event) {
 
-    let textoValido = /^[a-z\n\s]+$/.test(event.value) || event.value == "";
+    let textoValido = /^[a-z\n\s\.\,]+$/.test(event.value) || event.value == "";
 
     if(!textoValido) {
         alerta(event);
@@ -98,7 +98,7 @@ function normal(event) {
 
 function copiar() {
 
-    let conteudoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__texto').item(0).innerHTML;
+    let conteudoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__caixa__texto').item(0).innerHTML;
 
     navigator.clipboard.writeText(conteudoSaidaTexto);
 

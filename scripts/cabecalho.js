@@ -44,3 +44,12 @@ function setAria() {
 
 btnMenu.addEventListener("click", handleButtonClick);
 btnMenu.addEventListener("touchstart", handleButtonClick);
+
+function exibirMenu() {
+    if(window.innerWidth > 500) {
+        nav.classList.toggle("active");
+    }
+    setAria();
+}
+
+exibirMenu();
