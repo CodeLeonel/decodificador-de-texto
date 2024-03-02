@@ -282,6 +282,10 @@ body {
         align-items: center;
     }
 
+    .apresentacao__saida__comconteudo__caixa {
+        width: 80%;
+    }
+
     .botao__projeto {
         margin: 6px;
     }
