@@ -261,7 +261,11 @@ body {
         margin-top: 0.3125rem;
         position: relative;
         transition: 0.3s;
-    } 
+    }
+    
+    .apresentacao {
+        gap: 16px;
+    }
 
     .apresentacao__entrada {
         align-items: center;
@@ -282,8 +286,17 @@ body {
         align-items: center;
     }
 
+    .apresentacao__saida {
+        width: 99%;
+    }
+
+    .apresentacao__saida__comconteudo {
+        padding: 0;
+    }
+
     .apresentacao__saida__comconteudo__caixa {
-        width: 400px;
+        width: 100%;
+        overflow-x: auto;
         text-align: center;
     }
 
