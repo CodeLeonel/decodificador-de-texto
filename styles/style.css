@@ -44,7 +44,7 @@ body {
 
 .cabecalho__nav__menu {
     z-index: 1;
-    margin-top: 0.3rem;
+    top: 0.3rem;
     position: absolute;
     display: block;
     visibility: hidden;
@@ -261,7 +261,13 @@ body {
     }
 
     .cabecalho__nav {
+        display: flex;
+        justify-content: center;
         padding: 24px 0px 0px 24px; 
+    }
+
+    .cabecalho__nav__menu {
+        top: 5rem;
     }
 
     .icone_clique {
@@ -338,6 +344,13 @@ body {
     .cabecalho__nav.active .hamburguer::after {
         transform: rotate(-135deg);
         top: -0.4375rem;
+    }
+
+    .cabecalho__nav.active .cabecalho__nav__menu {
+        display: block;
+        visibility: visible;
+        overflow-y: auto;
+        height: 110px;
     }
 
 }
