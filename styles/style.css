@@ -89,6 +89,12 @@ body {
     height: 400px;
 }
 
+.apresentacao__entrada__opcoes {
+
+    margin: 4%;
+
+}
+
 .apresentacao__entrada__texto {
     margin: 4%;
     resize: none;
@@ -120,12 +126,26 @@ body {
     gap: 8px;
 }
 
-#criptografar {
+#botao__criptografar {
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
 }
 
-#descriptografar {
+#botao__texto {
+    
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+
+}
+
+#botao__base64 {
+
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+
+}
+
+#botao__descriptografar {
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
@@ -203,6 +223,8 @@ body {
     font-weight: 400;
     border-color: var(--cor-secundaria);
 }
+
+
 
 @media(max-width: 800px) {
 

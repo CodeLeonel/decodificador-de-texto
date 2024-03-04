@@ -1,6 +1,6 @@
 function criptografar() {
     
-    let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
+    let texto = document.querySelector('.apresentacao__entrada__texto').value;
 
     if(possuiConteudo(texto)) {
         texto = texto.replaceAll('e','enter');
@@ -18,7 +18,7 @@ function criptografar() {
 
 function descriptografar() {
 
-    let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
+    let texto = document.querySelector('.apresentacao__entrada__texto').value;
 
     if(possuiConteudo(texto)) {
         texto = texto.replaceAll('enter','e');
@@ -36,7 +36,7 @@ function descriptografar() {
 
 function exibeTexto(texto) {
 
-    let elementoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__caixa__texto').item(0);
+    let elementoSaidaTexto = document.querySelector('.apresentacao__saida__comconteudo__caixa__texto');
     elementoSaidaTexto.innerHTML = texto;
 
     let apresentacao_sem_conteudo = document.getElementById('saida__semconteudo');
@@ -73,12 +73,12 @@ function validacao(event) {
 function alerta(event) {
 
     event.style.border = '1px solid var(--cor-alerta)';
-    document.getElementById('criptografar').setAttribute('disabled',true);
-    document.getElementById('criptografar').style.setProperty('background-color','var(--cor-quaternaria)');
-    document.getElementById('criptografar').style.setProperty('color','var(--cor-ternaria)');
-    document.getElementById('descriptografar').setAttribute('disabled',true);
-    document.getElementById('descriptografar').style.setProperty('background-color','var(--cor-terciaria)');
-    document.getElementById('descriptografar').style.setProperty('color','var(--cor-quaternaria)');
+    document.getElementById('botao__criptografar').setAttribute('disabled',true);
+    document.getElementById('botao__criptografar').style.setProperty('background-color','var(--cor-quaternaria)');
+    document.getElementById('botao__criptografar').style.setProperty('color','var(--cor-ternaria)');
+    document.getElementById('botao__descriptografar').setAttribute('disabled',true);
+    document.getElementById('botao__descriptografar').style.setProperty('background-color','var(--cor-terciaria)');
+    document.getElementById('botao__descriptografar').style.setProperty('color','var(--cor-quaternaria)');
     document.getElementById('texto_alerta').style.setProperty('color','var(--cor-alerta)');
 
 }
@@ -86,19 +86,19 @@ function alerta(event) {
 function normal(event) {
 
     event.style.border = 'none';
-    document.getElementById('criptografar').removeAttribute('disabled');
-    document.getElementById('criptografar').style.setProperty('background-color','var(--cor-secundaria)');
-    document.getElementById('criptografar').style.setProperty('color','var(--cor-primaria)');
-    document.getElementById('descriptografar').removeAttribute('disabled');
-    document.getElementById('descriptografar').style.setProperty('background-color','var(--cor-primaria)');
-    document.getElementById('descriptografar').style.setProperty('color','var(--cor-secundaria)');
+    document.getElementById('botao__criptografar').removeAttribute('disabled');
+    document.getElementById('botao__criptografar').style.setProperty('background-color','var(--cor-secundaria)');
+    document.getElementById('botao__criptografar').style.setProperty('color','var(--cor-primaria)');
+    document.getElementById('botao__descriptografar').removeAttribute('disabled');
+    document.getElementById('botao__descriptografar').style.setProperty('background-color','var(--cor-primaria)');
+    document.getElementById('botao__descriptografar').style.setProperty('color','var(--cor-secundaria)');
     document.getElementById('texto_alerta').style.setProperty('color','var(--cor-terciaria)');
     
 }
 
 function copiar() {
 
-    let conteudoSaidaTexto = document.getElementsByClassName('apresentacao__saida__comconteudo__caixa__texto').item(0).innerHTML;
+    let conteudoSaidaTexto = document.querySelector('.apresentacao__saida__comconteudo__caixa__texto').innerHTML;
 
     navigator.clipboard.writeText(conteudoSaidaTexto);
 

@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles/style.css"/>
+        <link rel="stylesheet" href="styles/base64.css"/>
         <script defer src="scripts/script.js"></script>
         <script defer src="scripts/base64.js"></script>
         <script defer src="scripts/cabecalho.js"></script>
@@ -30,15 +31,20 @@
     </header>
     <main class="apresentacao">
         <section class="apresentacao__entrada">
-            <textarea class="apresentacao__entrada__texto" onkeyup="validacao(this)" placeholder="Digite seu texto"></textarea>
+            <div class="apresentacao__entrada__painel__botoes">
+                <button class="apresentacao__entrada__botoes__botao botao__projeto" id="botao__texto" onclick="exibirEntradaTexto()" >Texto</button>
+                <button class="apresentacao__entrada__botoes__botao botao__projeto" id="botao__base64" onclick="exibirEntradaBase64()" >Base64</button>
+            </div>
+            <textarea class="apresentacao__entrada__texto" id="caixa__texto__texto" onkeyup="validacao(this)" placeholder="Digite seu texto"></textarea>
+            <textarea class="apresentacao__entrada__texto" id="caixa__texto__base64" onkeyup="" placeholder="Digite seu código Base64"></textarea>
             <div class="apresentacao__entrada__painel">
                 <div class="apresentacao__entrada__painel__alerta">
                     <img class="apresentacao__entrada__painel__alerta__sinal" src="./imgs/bi_exclamation-circle-fill.svg" alt="Sinal de exclamação">
-                    <div class="apresentacao__entrada__painel__alerta__texto" id="texto_alerta">Apenas letras minúsculas e sem acento.</div>
+                    <div class="apresentacao__entrada__painel__alerta__texto" id="texto_alerta_texto">Apenas letras minúsculas e sem acento.</div>
                 </div>
                 <div class="apresentacao__entrada__painel__botoes">
-                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="criptografar" onclick="criptografarBase64()" >Criptografar</button>
-                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="descriptografar" onclick="descriptografarBase64()" > Descriptografar</button>
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="botao__criptografar" onclick="criptografarBase64()" >Criptografar</button>
+                    <button class="apresentacao__entrada__botoes__botao botao__projeto" id="botao__descriptografar" onclick="descriptografarBase64()" > Descriptografar</button>
                 </div>
             </div>
             

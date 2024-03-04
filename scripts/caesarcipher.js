@@ -8,7 +8,7 @@ let rotacao = parseInt(Math.random() * 24 + 1);
 
 function criptografarCifra() {
 
-    let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
+    let texto = document.querySelector('.apresentacao__entrada__texto').value;
     let novoTexto = '';
 
     if (possuiConteudo(texto)) {
@@ -28,7 +28,7 @@ function criptografarCifra() {
 
 function descriptografarCifra() {
 
-    let texto = document.getElementsByClassName('apresentacao__entrada__texto').item(0).value;
+    let texto = document.querySelector('.apresentacao__entrada__texto').value;
     let novoTexto = '';
 
     if (possuiConteudo(texto)) {
