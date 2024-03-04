@@ -13,7 +13,7 @@ function criptografarCifra() {
 
     if (possuiConteudo(texto)) {
 
-        for (let i = 0; i < alfabeto.length; i++) {
+        for (let i = 0; i < texto.length; i++) {
 
             novoTexto += novaLetra(texto[i]);
 
@@ -33,7 +33,7 @@ function descriptografarCifra() {
 
     if (possuiConteudo(texto)) {
 
-        for (let i = 0; i < alfabeto.length; i++) {
+        for (let i = 0; i < texto.length; i++) {
 
             novoTexto += decifraLetra(texto[i]);
 
