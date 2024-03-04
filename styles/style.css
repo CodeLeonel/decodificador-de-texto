@@ -44,6 +44,7 @@ body {
 
 .cabecalho__nav__menu {
     z-index: 1;
+    margin-top: 0.3rem;
     position: absolute;
     display: block;
     visibility: hidden;
@@ -57,7 +58,7 @@ body {
     display: block;
     visibility: visible;
     overflow-y: auto;
-    height: 250px;
+    height: 110px;
 }
 
 .icone {
