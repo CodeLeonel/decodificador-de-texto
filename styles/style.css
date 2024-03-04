@@ -44,7 +44,7 @@ body {
 
 .cabecalho__nav__menu {
     z-index: 1;
-    top: 0.3rem;
+    top: 4.2rem;
     position: absolute;
     display: block;
     visibility: hidden;
